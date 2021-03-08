@@ -14,4 +14,4 @@ Finally, run `yarn dev` to see magic happen 🎉
 
 Go edit a page in your `/pages` directory to get started 👍
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button?paid=true)](https://deploy.workers.cloudflare.com/?url=https://github.com/flareact/flareact-template&paid=true)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button?paid=true)](https://deploy.workers.cloudflare.com/?url=https://github.com/dad2vad/fl)
