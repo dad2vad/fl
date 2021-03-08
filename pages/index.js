@@ -52,7 +52,7 @@ export default function Home () {
           mt={{ xs: 14, md: 32 }}
           textAlign="center"
         >
-          Be Cool! Earn With cool.bio
+          ZALUPA!!!
         </Heading>
         <x.div m="0 auto" mt={{ md: -4, xs: -3 }} w={{ md: '80%', xs: 'auto' }}>
           <LazyImage
