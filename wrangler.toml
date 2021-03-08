@@ -1,0 +1,13 @@
+name = "l"
+type = "webpack"
+account_id = "0de3674adef884f16d5803ba28ee6e13"
+workers_dev = true
+vars = {B='',TOKEN="716677107:AAE-T6zzb5fku5DUUDfWYXrrmjG7x2SCMF8",X='',CTX='',U=''}
+
+# [site]
+# bucket = "./"
+# entry-point = "./"
+
+[[kv-namespaces]]
+binding = "M"
+id = "8dabce9f99434b4498950d98e8b485bc"
