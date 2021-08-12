@@ -1,3 +1,9 @@
+// A Worker that uses async HTMLRewriter.
+//
+// In this example, each `img` tag in the HTML body is fetch'd
+// on the edge to check if it exists. If the image returns a
+// non-200 response, rewrite the `src` attribute to use the
+// latest snapshot from the Internet Archive. (https://archive.org)
 
 addEventListener('fetch', event => {
   event.respondWith(fetchWithImageFix(event.request))
@@ -61,31 +67,10 @@ async function fixImageUrl(url) {
       archiveUrl.pathname.substring(index)
     console.log('Fixed image: ' + archiveUrl)
 
+    // Proxy the image url so we can heavily cache it
     return `/_archive?url=${archiveUrl}`
   } catch (err) {
     console.log('Missing image: ' + url)
     return response.url
   }
 }
-
-// import { handleEvent } from 'flareact'
-
-
-// const DEBUG = false
-
-// addEventListener('fetch', (event) => {
-//   try {
-//     event.respondWith(
-//       handleEvent(event, require.context('./pages/', true, /\.(js|jsx|ts|tsx)$/), DEBUG)
-//     )
-//   } catch (e) {
-//     if (DEBUG) {
-//       return event.respondWith(
-//         new Response(e.message || e.toString(), {
-//           status: 500
-//         })
-//       )
-//     }
-//     event.respondWith(new Response('Internal Error', { status: 500 }))
-//   }
-// })
